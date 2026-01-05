@@ -122,3 +122,188 @@ If interviewer asks:
 Answer:
 
 “The variable now refers to the new object, and the old reference is lost unless stored elsewhere.”
+
+#######################################
+
+🔁 Loops Over Every Data Structure (Beginner → DE mindset)
+
+1️⃣ Looping over a List
+scores = [45, 67, 89, 23]
+
+for score in scores:
+print(score)
+
+🧠 Think:
+
+“Take one item at a time from a list”
+
+2️⃣ Looping over a Tuple (same as list)
+
+Tuple = read-only list
+
+coordinates = (10, 20, 30)
+
+for value in coordinates:
+print(value)
+
+✔ Same syntax
+✔ Just can’t modify values
+
+3️⃣ Looping over a String
+
+A string is a sequence of characters.
+
+name = "Virat"
+
+for char in name:
+print(char)
+
+Output:
+
+V
+i
+r
+a
+t
+
+🧠 Useful in:
+
+Data cleaning
+
+Text parsing
+
+Validation
+
+4️⃣ Looping over a Dictionary (VERY IMPORTANT)
+
+Dictionary = key : value pairs.
+
+a) Loop over keys (default)
+player = {
+"name": "Virat",
+"age": 35,
+"team": "India"
+}
+
+for key in player:
+print(key)
+
+Output:
+
+name
+age
+team
+
+b) Loop over values
+for value in player.values():
+print(value)
+
+Output:
+
+Virat
+35
+India
+
+c) Loop over key + value (MOST USED)
+for key, value in player.items():
+print(key, ":", value)
+
+🧠 Data Engineering gold:
+
+Reading JSON
+
+APIs
+
+Config files
+
+5️⃣ Looping over a Set
+
+Set = unique values (no duplicates)
+
+ids = {101, 102, 103, 101}
+
+for id in ids:
+print(id)
+
+✔ Order not guaranteed
+✔ No duplicates
+
+6️⃣ Looping using range() (numbers)
+for i in range(5):
+print(i)
+
+Output:
+
+0
+1
+2
+3
+4
+
+Custom ranges
+for i in range(1, 11):
+print(i)
+
+for i in range(0, 11, 2):
+print(i)
+
+🧠 Used for:
+
+Index-based loops
+
+Controlled iterations
+
+7️⃣ Looping with index + value (enumerate)
+
+Very important pattern.
+
+players = ["Virat", "Rohit", "Rahul"]
+
+for index, player in enumerate(players):
+print(index, player)
+
+Output:
+
+0 Virat
+1 Rohit
+2 Rahul
+
+8️⃣ Looping over multiple lists together (zip)
+names = ["Virat", "Rohit", "Rahul"]
+scores = [80, 90, 70]
+
+for name, score in zip(names, scores):
+print(name, score)
+
+🧠 Real use:
+
+Merging datasets
+
+CSV row processing
+
+9️⃣ Nested Loops (loop inside loop)
+teams = ["India", "Australia"]
+players = ["A", "B", "C"]
+
+for team in teams:
+for player in players:
+print(team, player)
+
+🧠 Used in:
+
+Table data
+
+Matrix processing
+
+Cross joins
+
+🔟 Looping over List of Dictionaries (REAL DE SCENARIO)
+matches = [
+{"team": "India", "score": 250},
+{"team": "Australia", "score": 220}
+]
+
+for match in matches:
+print(match["team"], match["score"])
+
+🔥 This is core Data Engineering pattern.
