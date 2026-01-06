@@ -307,3 +307,16 @@ for match in matches:
 print(match["team"], match["score"])
 
 🔥 This is core Data Engineering pattern.
+
+🧠 Mental Model (IMPORTANT)
+
+| Data Type    | Loop gives    |
+| ------------ | ------------- |
+| list / tuple | item          |
+| string       | character     |
+| dict         | key           |
+| dict.items() | key + value   |
+| set          | unique item   |
+| range        | number        |
+| enumerate    | index + value |
+| zip          | paired values |
