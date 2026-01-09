@@ -1,0 +1,4 @@
+Hello Python
+Learning Python file writing
+Hello Python using append 'a'
+Learning Python file writing using append 'a'
